@@ -1,10 +1,16 @@
 const addProduct = () => {
+
     const productName = document.getElementById('product-name');
     const product = productName.value;
     productName.value = '';
     const productQuantity = document.getElementById('product-quantity');
     const quantity = productQuantity.value;
     productQuantity.value = '';
+   
+    if(product == '' || quantity == '') {
+        alert('Please fill up the form');
+        return;
+    }
 
     console.log(product, quantity);
     displayProduct(product, quantity);
